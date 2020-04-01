@@ -24,7 +24,7 @@ public class CursomcApplication implements CommandLineRunner {
 	public static void main(String[] args) {
 		SpringApplication.run(CursomcApplication.class, args);
 	}
-
+	
 	@Override
 	public void run(String... args) throws Exception {
 
@@ -41,6 +41,7 @@ public class CursomcApplication implements CommandLineRunner {
 		p1.getCategorias().addAll(Arrays.asList(cat1));
 		p2.getCategorias().addAll(Arrays.asList(cat1, cat2));
 		p3.getCategorias().addAll(Arrays.asList(cat1));
+		
 		
 		categoriaRepository.saveAll(Arrays.asList(cat1, cat2));
 		produtoRepository.saveAll(Arrays.asList(p1, p2, p3));
